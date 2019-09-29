@@ -1,11 +1,11 @@
 require "rails_helper"
 
 describe "user sees one article" do
-  describe "they link from the articles index" do
+  describe "they link from the article index" do
     it "displays information for one article" do
       article = Article.create!(title: "New Title", body: "New Body")
 
-      visit_articles_path
+      visit articles_path
 
       click_link article.title
 
